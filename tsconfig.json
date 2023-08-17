@@ -1,10 +1,10 @@
 {
     "compilerOptions": {
-        "strictNullChecks": true,
         "outDir": "./dist", // vou falar onde eu quero gerar meu código javascrit dentro do meu projeto
-        "module": "commonJS", // 
+        "module": "commonjs", // 
         "target": "ES2022",
         "esModuleInterop": true, // fazer uma conversão nos modules que utilizam ainda o commonJS 
-        "allowJs": true
+        "allowJs": true,
+        "strictNullChecks": true,
     }
 }

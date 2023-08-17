@@ -1,13 +1,11 @@
-import type { Config } from 'jest'
-
-const config: Config = {
+module.exports = {
   roots: ['<rootDir>/src'],
   collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
   coverageDirectory: 'coverage',
   testEnvironment: 'node',
   transform: {
-    '.+\\.tss': 'ts-jest'
-  }
+    '.+\\.ts$': 'ts-jest'
+  },
+  moduleFileExtensions: ['ts', 'js', 'json'],
+  verbose: true
 }
-
-export default config
