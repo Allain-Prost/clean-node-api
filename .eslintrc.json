@@ -4,6 +4,8 @@
       "project": "./tsconfig.json"
     }, // estamos dizendo ao eslint que vamos utilizar as configurações que foi definido no tsconfig.json
     "rules": {
-      "@typescript-eslint/strict-boolean-expressions": "off"
+      "@typescript-eslint/strict-boolean-expressions": "off",
+      "@typescript-eslint/consistent-type-exports": "error",
+      "@typescript-eslint/consistent-type-imports": "error"
     }
 }
