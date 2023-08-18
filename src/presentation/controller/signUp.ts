@@ -4,12 +4,11 @@ import type { HttResponse, HttpRequest } from '../protocols/http'
 
 export default class SignUpController {
   handle (httpResquest: HttpRequest): HttResponse {
-    if (!httpResquest.body.name) {
-      // Como devemos ler: retorne um badRequest caso esteja faltando um paramentro chamado name
-      return badRequest(new MissingParamError('name'))
-    }
-    if (!httpResquest.body.email) {
-      return badRequest(new MissingParamError('email'))
+    const requiredFields = ['name', 'email']
+    for (const field of requiredFields) {
+      if (!httpResquest.body[field]) {
+        return badRequest(new MissingParamError(field))
+      }
     }
     return {
       statusCode: 200,
